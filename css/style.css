@@ -8,174 +8,461 @@
 */
 
 /* ---------- Basic setup ---------- */
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 /* Background picture: images/bg-green.jpg with a dark layer on top
    so the text stays easy to read. Lower the 0.8 to show more picture. */
 body {
     background: linear-gradient(rgba(14, 26, 18, 0.8), rgba(14, 26, 18, 0.8)),
         url("../images/bg-green.jpg") center / cover fixed #0E1A12;
-    margin: 0; color: #F1F5EC;
-    font-family: Poppins, Arial, sans-serif; font-size: 16px;
+    margin: 0;
+    color: #F1F5EC;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
 }
 
-a { color: #F1F5EC; }
-a:hover { color: #7FD24A; }
-ul, ol { list-style: none; margin: 0; padding: 0; }
-h2 { font-size: 32px; margin: 0 0 10px; }
-h3 { font-size: 18px; margin: 0; }
+a {
+    color: #F1F5EC;
+}
+
+a:hover {
+    color: #7FD24A;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 0;
+}
 
 /* Every section is centered, max width 1100px */
-section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
 
 /* Small gray text under each section title */
-.intro, .lead, .about-text, .note, details p, .rates p {
+.intro,
+.lead,
+.about-text,
+.note,
+details p,
+.rates p {
     color: #B8C5B0;
 }
-.intro { margin-bottom: 30px; }
+
+.intro {
+    margin-bottom: 30px;
+}
 
 /* ---------- Header and menu ---------- */
 .site-header {
-    background: #16281B; padding: 15px 20px; display: flex;
-    justify-content: space-between; align-items: center; flex-wrap: wrap;
-    position: sticky; top: 0;
+    background: #16281B;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
 }
-.logo { font-size: 22px; font-weight: 700; text-decoration: none; }
-.site-header ul { display: flex; flex-wrap: wrap; gap: 18px; }
-.site-header a { text-decoration: none; }
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.site-header a {
+    text-decoration: none;
+}
 
 /* "Book Now" in the menu looks like a button */
 .site-header .nav-cta {
-    background: #7FD24A; color: #0E1A12; padding: 6px 16px;
+    background: #7FD24A;
+    color: #0E1A12;
+    padding: 6px 16px;
     border-radius: 5px;
 }
-.site-header .nav-cta:hover { background: #9BE06A; }
+
+.site-header .nav-cta:hover {
+    background: #9BE06A;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
-    display: inline-block; background: #7FD24A; color: #0E1A12;
-    border: none; padding: 12px 26px; border-radius: 5px;
-    font: 600 16px Poppins, Arial, sans-serif; text-decoration: none;
+    display: inline-block;
+    background: #7FD24A;
+    color: #0E1A12;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 5px;
+    font: 600 16px Poppins, Arial, sans-serif;
+    text-decoration: none;
     cursor: pointer;
 }
-.btn:hover { background: #9BE06A; color: #0E1A12; }
+
+.btn:hover {
+    background: #9BE06A;
+    color: #0E1A12;
+}
 
 /* Outlined button ("See my work") */
-.btn-ghost { background: none; color: #F1F5EC; border: 1px solid #7FD24A; }
-.btn-ghost:hover { background: #7FD24A; }
-.actions .btn { margin-right: 10px; }
+.btn-ghost {
+    background: none;
+    color: #F1F5EC;
+    border: 1px solid #7FD24A;
+}
+
+.btn-ghost:hover {
+    background: #7FD24A;
+}
+
+.actions .btn {
+    margin-right: 10px;
+}
 
 /* ---------- Home ---------- */
-.hero h1 { font-size: 46px; line-height: 1.2; margin: 0 0 20px; max-width: 700px; }
-.lead { max-width: 550px; margin-bottom: 25px; }
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    max-width: 700px;
+}
+
+.lead {
+    max-width: 550px;
+    margin-bottom: 25px;
+}
 
 /* ---------- Portfolio ---------- */
-.gallery-title { font-size: 22px; margin-bottom: 20px; }
+.gallery-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 
 /* 3 columns so every picture keeps its full shape (no cropping) */
-.gallery-art { column-count: 3; column-gap: 20px; }
-.gallery-art a { display: block; margin-bottom: 20px; break-inside: avoid; }
-.gallery-art img { display: block; width: 100%; height: auto; border-radius: 4px; }
-.gallery-art a:hover img { outline: 2px solid #7FD24A; }
-.more { margin-top: 30px; }
+.gallery-art {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.gallery-art a {
+    display: block;
+    margin-bottom: 20px;
+    break-inside: avoid;
+}
+
+.gallery-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.gallery-art a:hover img {
+    outline: 2px solid #7FD24A;
+}
+
+.more {
+    margin-top: 30px;
+}
 
 /* ---------- Services and rates ---------- */
 .rates li {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 18px 0; border-bottom: 1px solid #2A4030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #2A4030;
 }
-.rates p { margin: 0; font-size: 14px; }
-.price { color: #7FD24A; font-weight: 600; }
+
+.rates p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.price {
+    color: #7FD24A;
+    font-weight: 600;
+}
 
 /* ---------- Availability calendar ---------- */
-.calendar { max-width: 520px; background: #16281B; padding: 20px; border-radius: 8px; }
-.calendar h3 { margin-bottom: 15px; }
+.calendar {
+    max-width: 520px;
+    background: #16281B;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.calendar h3 {
+    margin-bottom: 15px;
+}
 
 /* 7 columns, one for each day of the week */
-.days-head, .days {
+.days-head,
+.days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
 }
-.days-head li { text-align: center; font-size: 14px; }
+
+.days-head li {
+    text-align: center;
+    font-size: 14px;
+}
+
 .days li {
-    height: 50px; line-height: 50px; text-align: center;
-    border-radius: 5px; font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
 }
 
 /* The 3 date colors */
-.free { background: #F1F5EC; color: #0E1A12; }
-.busy { background: #D49A45; color: #0E1A12; }
-.off { background: #0E1A12; color: #7C8F7E; text-decoration: line-through; }
-.days .blank { background: none; }
+.free {
+    background: #F1F5EC;
+    color: #0E1A12;
+}
+
+.busy {
+    background: #D49A45;
+    color: #0E1A12;
+}
+
+.off {
+    background: #0E1A12;
+    color: #7C8F7E;
+    text-decoration: line-through;
+}
+
+.days .blank {
+    background: none;
+}
 
 /* Color guide under the calendar */
-.legend { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; font-size: 14px; }
-.key { display: inline-block; width: 14px; height: 14px; border-radius: 3px; margin-right: 6px; }
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.key {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    margin-right: 6px;
+}
 
 /* ---------- Commission info ---------- */
-#commission-info h3 { margin: 30px 0 15px; }
-.steps { counter-reset: step; }
-.steps li { padding: 8px 0; }
+#commission-info h3 {
+    margin: 30px 0 15px;
+}
+
+.steps {
+    counter-reset: step;
+}
+
+.steps li {
+    padding: 8px 0;
+}
 
 /* The number badges are added automatically */
 .steps li::before {
-    counter-increment: step; content: counter(step);
-    display: inline-block; width: 30px; height: 30px; line-height: 30px;
-    text-align: center; border-radius: 50%; background: #7FD24A;
-    color: #0E1A12; font-weight: 600; margin-right: 12px;
+    counter-increment: step;
+    content: counter(step);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: #7FD24A;
+    color: #0E1A12;
+    font-weight: 600;
+    margin-right: 12px;
 }
 
-.faq { max-width: 700px; }
-details { border-bottom: 1px solid #2A4030; padding: 14px 0; }
-summary { cursor: pointer; font-weight: 600; }
-details p { margin: 8px 0 0; }
-.note { margin-top: 20px; font-size: 14px; }
+.faq {
+    max-width: 700px;
+}
+
+details {
+    border-bottom: 1px solid #2A4030;
+    padding: 14px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+details p {
+    margin: 8px 0 0;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 14px;
+}
 
 /* ---------- Contact details ---------- */
 .contact-details {
-    max-width: 750px; margin-bottom: 30px; background: #16281B;
-    padding: 10px 20px; border-radius: 8px;
+    max-width: 750px;
+    margin-bottom: 30px;
+    background: #16281B;
+    padding: 10px 20px;
+    border-radius: 8px;
 }
-.contact-details li { padding: 10px 0; border-bottom: 1px solid #2A4030; }
-.contact-details li:last-child { border-bottom: none; }
-.contact-details .label { display: inline-block; width: 80px; color: #7FD24A; font-weight: 600; }
-.contact-details a { text-decoration: none; }
+
+.contact-details li {
+    padding: 10px 0;
+    border-bottom: 1px solid #2A4030;
+}
+
+.contact-details li:last-child {
+    border-bottom: none;
+}
+
+.contact-details .label {
+    display: inline-block;
+    width: 80px;
+    color: #7FD24A;
+    font-weight: 600;
+}
+
+.contact-details a {
+    text-decoration: none;
+}
 
 /* ---------- Forms (booking and message) ---------- */
-.form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 750px; }
-.form label { display: block; font-size: 14px; }
-.wide { grid-column: 1 / 3; }  /* uses the full row */
-.form .btn { width: 220px; }
-
-input, select, textarea {
-    display: block; width: 100%; margin-top: 5px; padding: 10px;
-    background: #16281B; color: #F1F5EC; border: 1px solid #2A4030;
-    border-radius: 5px; font: 16px Poppins, Arial, sans-serif;
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 750px;
 }
-input:focus, select:focus, textarea:focus { outline: 2px solid #7FD24A; }
+
+.form label {
+    display: block;
+    font-size: 14px;
+}
+
+.wide {
+    grid-column: 1 / 3;
+}
+
+/* uses the full row */
+.form .btn {
+    width: 220px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    background: #16281B;
+    color: #F1F5EC;
+    border: 1px solid #2A4030;
+    border-radius: 5px;
+    font: 16px Poppins, Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #7FD24A;
+}
 
 /* ---------- About ---------- */
-.about-text { max-width: 600px; }
-.tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-.tools li { border: 1px solid #2A4030; border-radius: 20px; padding: 5px 16px; }
+.about-text {
+    max-width: 600px;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tools li {
+    border: 1px solid #2A4030;
+    border-radius: 20px;
+    padding: 5px 16px;
+}
 
 /* ---------- Footer ---------- */
 .site-footer {
-    display: flex; justify-content: space-between; align-items: flex-end;
-    flex-wrap: wrap; gap: 15px; padding: 25px 20px;
-    border-top: 1px solid #2A4030; font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px 20px;
+    border-top: 1px solid #2A4030;
+    font-size: 14px;
 }
-.footer-info p { margin: 0 0 4px; }
-.footer-info .dev { font-weight: 600; }
+
+.footer-info p {
+    margin: 0 0 4px;
+}
+
+.footer-info .dev {
+    font-weight: 600;
+}
 
 /* ---------- Phone view (screens 700px wide or smaller) ---------- */
 @media (max-width: 700px) {
-    .hero h1 { font-size: 32px; }
-    .gallery-art { column-count: 1; }
-    .form { grid-template-columns: 1fr; }
-    .wide { grid-column: 1 / 2; }
-    .rates li { display: block; }
-    .site-header { position: static; }
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .gallery-art {
+        column-count: 1;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: 1 / 2;
+    }
+
+    .rates li {
+        display: block;
+    }
+
+    .site-header {
+        position: static;
+    }
 }
