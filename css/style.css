@@ -1,6 +1,6 @@
 /*
   DES.ART - style.css (design file for index.html)
-  Simple dark green style from my green-haired girl artwork.
+  Simple dark green style from sakong green-haired girl artwork.
   COLORS: #0E1A12 background | #16281B boxes | #F1F5EC text
           #7FD24A leaf green (buttons, prices) | #B8C5B0 small text
           #2A4030 lines | #D49A45 busy dates
@@ -9,8 +9,6 @@
 
 /* ---------- Basic setup ---------- */
 * { box-sizing: border-box; }
-/* Background picture: images/bg-green.jpg with a dark layer on top
-   so the text stays easy to read. Lower the 0.8 to show more picture. */
 body {
     background: linear-gradient(rgba(14, 26, 18, 0.8), rgba(14, 26, 18, 0.8)),
     url("../images/bg-green.jpg") center / cover fixed #0E1A12;
@@ -177,7 +175,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid #7FD24A; }
 .footer-info p { margin: 0 0 4px; }
 .footer-info .dev { font-weight: 600; }
 
-/* ---------- Phone view (screens 700px wide or smaller) ---------- */
+/* ---------- Phone view (screens 700px gamay or big) ---------- */
 @media (max-width: 700px) {
   .hero h1 { font-size: 32px; }
   .gallery-art { column-count: 1; }
